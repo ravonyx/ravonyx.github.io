@@ -4,10 +4,10 @@
 		<title>Prologue by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
+		
 	</head>
 	<body>
 
@@ -46,7 +46,6 @@
 							<li><a href="https://github.com/ravonyx" class="icon fa-github"><span class="label">Github</span></a></li>
 						</ul>
 				</div>
-				
 			</div>
 
 		<!-- Main -->
@@ -55,19 +54,27 @@
 				<!-- Intro -->
 					<section id="top" class="one dark cover">
 						<div class="container">
-
 							<header>
 								<h2 class="alt">Bonjour, je m'appelle <strong>Manon Maillard</strong> </h2>
 								<p>Je suis à la recherche d'un poste dans le domaine du développement C/C++</p>
 							</header>
-
-							<footer>
-								<a href="#portfolio" class="button scrolly">Portfolio</a>
-							</footer>
-
 						</div>
+						<section class="regular slider">
+							<div>
+							  <img src="images/fractale.png">
+							</div>
+							<div>
+							  <img src="images/game_of_life.png">
+							</div>
+							<div>
+							  <img src="images/level_gen.png">
+							</div>
+							<div>
+							  <img src="images/level_gen_1.png">
+							</div>
+						</section>
 					</section>
-
+							  
 				<!-- Portfolio -->
 					<section id="portfolio" class="two">
 						<div class="container">
@@ -75,19 +82,20 @@
 							<header>
 								<h2>Portfolio</h2>
 							</header>
-
+			
 							<p>Ce portfolio présente les projets que j'ai réalisés durant mes 5 années d'études</p>
-
+							
+  
 							<div class="row">
 								<div class="4u 12u$(mobile)">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+										<a href="images/fractale.png" class="image fit" ><img src="images/fractale.png" alt="" /></a>
 										<header>
-											<h3>Ipsum Feugiat</h3>
+											<h3>Generateur Eponge de Menger</h3>
 										</header>
 									</article>
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="images/pic03.jpg" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
 										<header>
 											<h3>Rhoncus Semper</h3>
 										</header>
@@ -148,7 +156,48 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			
+			<script type="text/javascript" src="assets/slick/slick.min.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+				$(document).on('ready', function() {
+				  $(".regular").slick({
+					dots: true,
+					autoplay: true,
+					infinite: true,
+					slidesToShow: 3,
+					slidesToScroll: 3
+				  });
+				  responsive: [
+					{
+					  breakpoint: 1024,
+					  settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					  }
+					},
+					{
+					  breakpoint: 600,
+					  settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					  }
+					},
+					{
+					  breakpoint: 480,
+					  settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					  }
+					}
+					// You can unslick at a given breakpoint now by adding:
+					// settings: "unslick"
+					// instead of a settings object
+				  ]
+				});
+			</script>
 
 	</body>
 </html>
