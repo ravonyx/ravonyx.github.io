@@ -450,7 +450,11 @@
 	.\31 u\24 + * {
 		clear: left;
 	}
-
+	
+	.\-12u {
+		margin-left: 100%;
+	}
+	
 	.\-11u {
 		margin-left: 91.66667%;
 	}
